@@ -1,0 +1,233 @@
+/* Colors */
+/* Primary */
+$veryDarkMagenta:hsl(300, 43%, 22%);
+$softPink:hsl(333, 80%, 67%);
+
+/* Neutral */
+$darkGrayishMagenta:hsl(303, 10%, 53%);
+$lightGrayishMagenta:hsl(300, 24%, 96%);
+$white:hsl(0, 0%, 100%);
+
+/* FontSizes */
+$light:400;
+$bold:500;
+$bolder:700;
+
+/* Font style */
+$font:'League Spartan', sans-serif;
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p{
+    margin-top: 0;
+}
+
+img{
+    display: block;
+}
+
+body{
+    font-family: $font;
+    background-color:$white;
+    background-image: url("/images/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.proof{
+    max-width: 350px;
+    margin-inline: auto;
+
+    &__heading{
+        margin-top: 4.5rem;
+        text-align: center;
+        font-size: 2.5rem;
+        color: $veryDarkMagenta;
+        font-weight: $bolder;
+    }
+
+    &__text{
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.5;
+        color: $darkGrayishMagenta;
+    }
+}
+
+.rating__section{
+    margin-top: 2rem;
+
+    .ratings{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color:$lightGrayishMagenta;
+        height:5.5rem;
+        border-radius:8px;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        color: $veryDarkMagenta;
+
+        .stars {
+            width:39%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 1rem;
+        }
+    }
+    .ratings + .ratings{
+        margin-top: 1rem;
+    }
+}
+
+.buyers__section{
+    margin-top: 3rem;
+
+    .buyer{
+        border-radius: 10px;
+        background-color: $veryDarkMagenta;
+        color: $white;
+        height: 17rem;
+    }
+
+    .buyer + .buyer{
+        margin-top:1rem ;
+    }
+
+    .buyerIntro{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        padding-top: 2rem;
+
+        img{
+            border-radius: 50%;
+            width: 40px;
+        }
+
+        .buyer__name{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 1.5rem;
+
+            .vtext{
+                margin-top: .3rem;
+                font-weight: $light;
+                color: $softPink;
+            }
+        }
+    }
+
+    .buyers__comment{
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 1.5rem;
+        text-align: left;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width:700px){
+
+    body{
+        background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+        background-position: top 0 left -380px, bottom 100px right -100px;
+        background-repeat: no-repeat;
+        background-size: contain, contain;
+    }
+    .proof{
+       max-width: 100%;
+       margin-top: 3rem;
+       display: grid;
+       grid-template-columns:1fr 450px 370px 450px 1fr;
+
+
+        &__heading{
+            font-size: 4rem;
+            text-align: left;
+        }
+
+        &__text{
+            font-weight: $bold;
+            text-align: left;
+        }
+       header{
+        grid-column: 2/3;
+       }
+
+       .buyers__section{
+        margin-top: 3.5rem;
+        display: flex;
+        grid-row: 2;
+        grid-column:2/span 3;
+       }
+
+       .rating__section{
+        position: relative;
+        grid-column: 4;
+        align-self: center;
+        top: 1rem;
+
+
+        .ratings{
+
+            width: 500px;
+            height: 4rem;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .stars{
+                width: 30%;
+                margin-left: 1rem;
+                margin-bottom: 0;
+                margin-right: 2rem;
+            }
+        }
+        
+       }
+       .one {
+       margin-left: -160px;
+       }
+       .two{
+        margin-left: -100px;
+       }
+       .three {
+        margin-left: -50px;
+       }
+    }
+
+    .buyers__section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .buyer{
+            position: relative;
+            max-width: 400px;
+        }
+
+        .buyerOne{
+           top: 5px;
+        }
+        .buyerTwo{
+            top: 15px;
+        }
+        .buyerThree{
+            top: 30px;
+        }
+    }
+
+
+}
