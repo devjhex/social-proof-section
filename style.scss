@@ -139,7 +139,7 @@ body{
     }
 }
 
-@media (min-width:700px){
+@media (min-width:850px){
 
     body{
         background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
@@ -160,6 +160,7 @@ body{
         }
 
         &__text{
+            margin-top: 2rem;
             font-weight: $bold;
             text-align: left;
         }
