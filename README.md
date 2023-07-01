@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg) 
+![Design preview for the Social proof section coding challenge](./design/Solution.png) 
 
 
 ### Links
